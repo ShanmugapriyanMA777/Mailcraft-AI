@@ -40,7 +40,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             <div className="mt-10 space-y-3">
               {[
                 "10+ email tools in one place",
-                "Powered by Google Gemini 2.5 Flash",
+                "Done by Team Priyan",
                 "9 languages supported",
                 "Free to get started",
               ].map((f) => (

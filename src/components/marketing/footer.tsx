@@ -70,7 +70,7 @@ export function Footer() {
             © {new Date().getFullYear()} MailCraft AI. All rights reserved.
           </p>
           <p className="text-xs text-ink-500 dark:text-ink-400">
-            Powered by Google Gemini 2.5 Flash
+            Done by Team Priyan
           </p>
         </div>
       </div>
