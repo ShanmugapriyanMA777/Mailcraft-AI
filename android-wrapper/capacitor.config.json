@@ -1,1 +1,1 @@
-{ "appId": "com.mailcraft.ai", "appName": "MailcraftAI", "webDir": "www" }
+{ "appId": "com.mailcraft.ai", "appName": "Mailcraft AI", "webDir": "www", "server": { "url": "https://mailcraft-ai-5ev9.vercel.app/" } }
