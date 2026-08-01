@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fefce8;
+  --color-brand-100: #fef9c3;
+  --color-brand-200: #fef08a;
+  --color-brand-300: #fde047;
+  --color-brand-400: #facc15;
+  --color-brand-500: #eab308;
+  --color-brand-600: #ca8a04;
+  --color-brand-700: #a16207;
+  --color-brand-800: #854d0e;
+  --color-brand-900: #713f12;
+  
+  --color-pink-50: #f8fafc;
+  --color-pink-500: #94a3b8;
+  --color-pink-600: #64748b;
+
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #02020a;
+
+  --font-sans: "Outfit", "ui-sans-serif", "system-ui", "sans-serif";
+}
+
+:root {
+  /* Silver & Gold Theme */
+  --background: 241 245 249; /* Light Silver */
+  --foreground: 15 23 42;
+  --card: 226 232 240; /* Silver */
+  --card-foreground: 15 23 42;
+  --border: 203 213 225;
+  --input: 203 213 225;
+  --ring: 234 179 8; /* Gold */
+  --muted: 226 232 240;
+  --muted-foreground: 71 85 105;
+  --primary: 234 179 8; /* Gold */
+  --primary-foreground: 255 255 255;
+  --accent: 148 163 184; /* Silver Accent */
+  --accent-foreground: 15 23 42;
+  --destructive: 239 68 68;
+  --destructive-foreground: 15 23 42;
+}
+
+.dark {
+  --background: 15 23 42; /* Dark Silver */
+  --foreground: 248 250 252;
+  --card: 30 41 59;
+  --card-foreground: 248 250 252;
+  --border: 51 65 85;
+  --input: 51 65 85;
+  --ring: 234 179 8; /* Gold */
+  --muted: 30 41 59;
+  --muted-foreground: 148 163 184;
+  --primary: 234 179 8; /* Gold */
+  --primary-foreground: 255 255 255;
+  --accent: 71 85 105; /* Silver Accent */
+  --accent-foreground: 248 250 252;
+  --destructive: 248 113 113;
+  --destructive-foreground: 15 23 42;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgb(var(--muted)) 0%,
+    rgb(var(--border)) 50%,
+    rgb(var(--muted)) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: 0.5rem;
+}
+
+.glass {
+  background: rgba(13, 13, 28, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .glass {
+  background: rgba(13, 13, 28, 0.4);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted-foreground));
+}
+
+/* Silver & Gold specific classes */
+.bg-galaxy {
+  background: radial-gradient(circle at 15% 50%, rgba(234, 179, 8, 0.15), transparent 40%),
+              radial-gradient(circle at 85% 30%, rgba(148, 163, 184, 0.1), transparent 40%),
+              rgb(var(--background));
+}
+
+.text-gradient-galaxy {
+  background: linear-gradient(135deg, #fbbf24, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
